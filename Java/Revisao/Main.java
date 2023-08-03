@@ -34,7 +34,7 @@ public class Main {
 
                             // Preencher Atributos
                             gatos[contGatos].setNome(JOptionPane.showInputDialog("Informe o nome do gato:"));
-                            gatos[contGatos].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o nome do gato:")));
+                            gatos[contGatos].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o peso do gato:")));
 
                             contGatos++;
                             break;
@@ -44,7 +44,7 @@ public class Main {
 
                             // Preencher Atributos
                             cachorros[contCachorros].setNome(JOptionPane.showInputDialog("Informe o nome do cachorro:"));
-                            cachorros[contCachorros].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o nome do cachorro:")));
+                            cachorros[contCachorros].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o peso do cachorro:")));
 
                             contCachorros++;
                             break;
@@ -53,8 +53,8 @@ public class Main {
                             outros[contOutros] = new OutrosAnimais();
 
                             // Preencher Atributos
-                            outros[contOutros].setNome(JOptionPane.showInputDialog("Informe o nome do cachorro:"));
-                            outros[contOutros].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o nome do cachorro:")));
+                            outros[contOutros].setNome(JOptionPane.showInputDialog("Informe o nome do animal:"));
+                            outros[contOutros].setPeso(Double.parseDouble(JOptionPane.showInputDialog("Informe o peso do animal:")));
 
                             contOutros++;
                             break;
@@ -62,6 +62,7 @@ public class Main {
                         default:
                             break;
                     }
+
                     break;
 
                 case 2:
