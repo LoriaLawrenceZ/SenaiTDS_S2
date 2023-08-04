@@ -1,7 +1,5 @@
 package ExemploThrow;
 
-import java.util.Date;
-
 import javax.swing.JOptionPane;
 
 public class Main {

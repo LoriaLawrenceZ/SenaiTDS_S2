@@ -1,0 +1,20 @@
+.container-fluid{
+    width: 100%;
+}
+
+.col{
+    height: 26rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    height: 24rem;
+    width: 90%;
+}
+
+.card-img-top{
+    height: 14rem;
+    width: 100%;
+    background-color: gray;
+}

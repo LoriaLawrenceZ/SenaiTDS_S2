@@ -1,0 +1,23 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*-----===FORM===-----*/
+article{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.form-page-title h1{
+    font-size: 32px;
+    font-weight: bolder;
+}
+.form-page-title h2{
+    font-size: 18px;
+    font-weight: 100;
+}

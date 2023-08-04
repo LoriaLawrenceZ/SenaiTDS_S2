@@ -36,7 +36,7 @@ function checkLastItem() {
     if (currentIndex >= maxVisibleIndex) {
         nextButton.forEach(button => {
             button.classList.add("disabled");
-            button.disabled = true;
+            button.disabled = false;
         });
     } else {
         nextButton.forEach(button => {
@@ -48,7 +48,7 @@ function checkLastItem() {
     if (currentIndex === 0) {
         prevButton.forEach(button => {
             button.classList.add("disabled");
-            button.disabled = true;
+            button.disabled = false;
         });
     } else {
         prevButton.forEach(button => {

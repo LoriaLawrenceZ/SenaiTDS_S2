@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisã LMR</title>
     <link rel="stylesheet" href="../css/universal.css">
+    <link rel="stylesheet" href="../css/contato.css">
 </head>
 
 <body>
@@ -35,7 +36,129 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <article class="form-page-container">
+            <section class="form-page-title">
+                <h1>Formas de pagamento</h1>
+                <h2>Por favor, coloque suas informações de cobrança nos espaços abaixo</h2>
+            </section>
+
+            <section class="form-container">
+                <form action="">
+                    <div class="personal-data">
+                        <div class="personal-data-title">
+                            <h2>Endereço de cobrança</h2>
+                        </div>
+
+                        <fieldset class="nome">
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id="nome" required>
+                        </fieldset>
+
+                        <fieldset class="sobrenome">
+                            <label for="nome">Sobrenome</label>
+                            <input type="text" name="sobrenome" id="sobrenome" required>
+                        </fieldset>
+
+                        <fieldset class="usuario">
+                            <label for="nome">Usuário</label>
+                            <div class="input-group">
+                                <ion-icon name="at-outline"></ion-icon>
+                                <input type="text" name="usuario" id="usuario" placeholder="Username" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="email">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="seuemail@example.com" required>
+                        </fieldset>
+
+                        <fieldset class="endereco">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" name="endereco" id="endereco" placeholder="Rua Fulano Ciclano, 123" required>
+                        </fieldset>
+
+                        <fieldset class="pais">
+                            <label for="pais">País</label>
+                            <select name="pais" id="pais">
+                                <option value="">Escolha</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Portugal">Portugal</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="estado">
+                            <label for="estado">Estado</label>
+                            <select name="estado" id="estado">
+                                <option value="">Escolha</option>
+                                <option value="SaoPaulo">SP - São Paulo</option>
+                                <option value="MinasGerais">MG - Minas Gerais</option>
+                                <option value="RioDeJaneiro">RJ - Rio de Janeiro</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset class="cep">
+                            <label for="cep">CEP</label>
+                            <input type="text" name="cep" id="cep" required>
+                        </fieldset>
+
+                        <fieldset class="checkbox-1">
+                            <label for="checkbox-1">Endereço de pagamento é o mesmo de entrega</label>
+                            <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                        </fieldset>
+
+                        <fieldset class="checkbox-2">
+                            <label for="checkbox-2">Salvar estas informações para proximas compras</label>
+                            <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                        </fieldset>
+                    </div>
+
+                    <div class="paymant-data">
+                        <fieldset class="forma-pagamento">
+                            <div class="opcao-cartao-credito">
+                                <label for="cartao-credito">Cartão de Crédito</label>
+                                <input type="radio" name="cartao-credito" id="cartao-credito" required>
+                            </div>
+
+                            <div class="opcao-cartao-debito">
+                                <label for="cartao-debito">Cartão de Débito</label>
+                                <input type="radio" name="cartao-debito" id="cartao-debito" required>
+                            </div>
+
+                            <div class="opcao-paypal">
+                                <label for="paypal">Paypal</label>
+                                <input type="radio" name="paypal" id="paypal" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="nome-cartao">
+                            <label for="nome-cartao">Nome no cartão</label>
+                            <input type="text" name="nome-cartao" id="nome-cartao" required>
+                        </fieldset>
+
+                        <fieldset class="numero-cartao">
+                            <label for="numero-cartao">Número cartão de crédito</label>
+                            <input type="text" name="numero-cartao" id="numero-cartao" required>
+                        </fieldset>
+
+                        <fieldset class="data-expiro">
+                            <label for="data-expiro">Data de expiração</label>
+                            <input type="date" name="data-expiro" id="data-expiro" required>
+                        </fieldset>
+
+                        <fieldset class="cvv">
+                            <label for="cvv">CVV</label>
+                            <input type="text" name="cvv" id="cvv" required>
+                        </fieldset>
+                    </div>
+
+                    <div class="submit">
+                        <input type="submit" name="salvar-dados" id="salvar-dados" value="Salvar Dados">
+                    </div>
+                </form>
+            </section>
+        </article>
+    </main>
 
     <footer>
         <div class="footer-links">
@@ -71,5 +194,11 @@
         </div>
     </footer>
 </body>
+
+<!--IonIcons-->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<!--Own JavaScript-->
+<script src="../js/contato.js"></script>
 
 </html>

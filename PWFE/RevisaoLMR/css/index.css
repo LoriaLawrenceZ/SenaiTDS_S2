@@ -1,50 +1,19 @@
+/*-----===MAIN===-----*/
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /*-----===CAROUSEL===-----*/
-.carousel-cabecalho{
-    width: 100%;
-    position: absolute;
-    top: 35vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transform: translateY(-50%);
-}
-.prvItem, .nxtItem{
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-    cursor: pointer;
-}
-.prvItem.disabled,
-.nxtItem.disabled {
-    opacity: 0.5;
-    cursor: default;
-}
-
-
-.carousel-visible{
-    width: 100%;
+#carouselExampleAutoplaying{
     height: 50vh;
-    overflow: hidden;
-}
-.carousel{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.carousel-item{
-    width: 100%;
-    height: 100%;
-}
-.carousel-item-img-container{
-    height: 100%;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
-.carousel-item-img-container img{
-    width: 100%;
+
+.carousel-control-next, .carousel-control-prev{
+    width: 5%;
+    opacity: .6;
 }

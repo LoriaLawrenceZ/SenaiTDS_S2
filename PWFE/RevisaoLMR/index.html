@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisã LMR</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Own Style-->
     <link rel="stylesheet" href="css/universal.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -14,7 +18,7 @@
         <figure class="logo-container">
             <img src="img/" alt="Logo" class="logo-img">
         </figure>
-        
+
         <nav class="horizontal-nav">
             <a href="index.html">HOME</a>
             <a href="html/produtos.html">PRODUTOS</a>
@@ -32,42 +36,34 @@
                 <li><a href="html/produtos.html">PRODUTOS</a></li>
                 <li><a href="html/contato.html">CONTATO</a></li>
                 <li><a href="html/conta.html">CONTA</a></li>
-            </ul>         
+            </ul>
         </nav>
     </header>
 
     <main>
-        <article class="carousel-container">
-            <div class="carousel-cabecalho">
-                <button type="button" class="prvItem"> < </button>
-                <button type="button" class="nxtItem"> > </button>
-            </div>
-
-            <div class="carousel-visible">
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <figure class="carousel-item-img-container">
-                            <img src="img/img1.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="carousel-item">
-                        <figure class="carousel-item-img-container">
-                            <img src="" alt="">
-                        </figure>
-                    </div>
-                    <div class="carousel-item">
-                        <figure class="carousel-item-img-container">
-                            <img src="img/img1.jpg" alt="">
-                        </figure>
-                    </div>
-                    <div class="carousel-item">
-                        <figure class="carousel-item-img-container">
-                            <img src="" alt="">
-                        </figure>
-                    </div>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/img1.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
-        </article>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </main>
 
     <footer>
@@ -105,6 +101,11 @@
     </footer>
 </body>
 
-<script src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
 
 </html>
