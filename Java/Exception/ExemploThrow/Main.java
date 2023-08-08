@@ -2,38 +2,41 @@ package ExemploThrow;
 
 import javax.swing.JOptionPane;
 
+//conter letra maiuscula e minuscula
+
 public class Main {
     public static void main(String[] args) {
-        try {
-            JOptionPane.showMessageDialog(null, "Welcome to SENAI!");
-            
-            String dataNascimento = JOptionPane.showInputDialog("Informe vossa data de aniversário");
-            dataNascimento += JOptionPane.showInputDialog("Informe vosso mês de aniversário");
-            dataNascimento += JOptionPane.showInputDialog("Informe vosso ano de aniversário");
+        boolean senhaOk = true;
 
-            String diaMesAno = dataNascimento.replace("/", "");
-            String diaMes = "";
+        JOptionPane.showMessageDialog(null, "Welcome to SENAI!");
+        
+        String dataNascimento = JOptionPane.showInputDialog("Informe vossa data de aniversário");
+        
+        dataNascimento = dataNascimento.replace("/", "");
+        
+        String login = JOptionPane.showInputDialog("Informe vosso usuário:");
 
-            String[] aniversario = diaMesAno.split("");
+        while(senhaOk){
+            try {
+                String senha = JOptionPane.showInputDialog("Informe vossa senha:");
+    
+                if (senha.length() != 6) {
+                    throw new Exception("Senha deve ter 6 Dígitos");            
+                }
+                else if(senha.contains(dataNascimento) | senha.contains(dataNascimento.substring(0, 3))){
+                    throw new Exception("Senha não pode conter data de aniversário");
+                }
+                else if(senha.contains(login)){
+                    throw new Exception("Senha não pode conter login");
+                }
+                else if(!senha.matches(".*[a-z].*") | !senha.matches(".*[A-Z].*")){
+                    throw new Exception("Senha deve conter letras Maiúsculas E Minúsculas");
+                }
 
-            for (int i = 0; i < 4; i++) {
-                diaMes += aniversario[i];
+                senhaOk =  false;
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e.getMessage(), "senha", 0);
             }
-
-            String login = JOptionPane.showInputDialog("Informe vosso usuário:");
-            String senha = JOptionPane.showInputDialog("Informe vossa senha:");
-
-            if (senha.length() != 6) {
-                throw new Exception("Senha deve ter 6 Dígitos");            
-            }
-            else if(senha.contains(diaMes) | senha.contains(diaMesAno)){
-                throw new Exception("Senha não pode conter data de aniversário");
-            }
-            else if(senha.contains(login)){
-                throw new Exception("Senha não pode conter login");
-            }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
         }
 
     }
