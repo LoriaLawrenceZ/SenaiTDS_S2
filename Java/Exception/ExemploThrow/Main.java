@@ -2,8 +2,6 @@ package ExemploThrow;
 
 import javax.swing.JOptionPane;
 
-//conter letra maiuscula e minuscula
-
 public class Main {
     public static void main(String[] args) {
         boolean camposOk = true;
