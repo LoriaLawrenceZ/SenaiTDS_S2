@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello PHP</title>
-</head>
-<body>
+
 <?php
-    echo "Hello world!!";
+    $name = "Lorenzo";
+    $age = 18;
+    $num1 = 5;
+
+    echo "Hello world!!\n";
+    echo "MORRA MATHEUS, MORRA!!!\n";
     # Matheus MORRA!!!
     //Matheus MORRA!!!
     /*Matheus MORRA!!!*/
-    echo "MORRA MATHEUS, MORRA!!!";
+    echo $name, "\n", $age, "\n";
+    echo ($num1 + 2), " carros\n";
 ?>
-</body>
-</html>
