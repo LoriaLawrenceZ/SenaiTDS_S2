@@ -49,7 +49,7 @@
 
                 <fieldset class="fs-submit">
                     <button type="button" class="btn-voltar">
-                        <a href="Etapa1.php">
+                        <a href="Etapa2.php">
                             <h1>VOLTAR</h1>
                         </a>
                     </button>
