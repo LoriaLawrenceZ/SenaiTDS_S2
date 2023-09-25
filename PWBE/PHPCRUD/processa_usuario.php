@@ -12,7 +12,7 @@
         try {
             // Preparar as informações
             // Montar a SQL (pgsql)
-            $sql = "INSERT INTO usuario(nome, data_nascimento, telefone, email, senha) VALUES(:nome, :dataNascimento, :telefone, :email, :senha)";
+            $sql = "INSERT INTO Usuarios(nome, data_nascimento, telefone, email, senha) VALUES(:nome, :dataNascimento, :telefone, :email, :senha)";
             // Preparar a SQL (pdo)
             $statement = $mysqli->prepare($sql);
             // Definir/organizar os dados p/ SQL
@@ -28,7 +28,7 @@
             if ($statement->execute($dados)) {
                 header("Location: index.php?msgSucesso=Cadastro realizado com sucesso!");
             }
-        } catch (PDOException $e) {
+        } catch (mysqli_sql_exception $e) {
             //die($e->getMessage());
             header("Location: index.php?msgErro=Falha ao cadastrar...");
         }

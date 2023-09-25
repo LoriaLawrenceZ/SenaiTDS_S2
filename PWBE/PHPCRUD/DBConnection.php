@@ -6,7 +6,7 @@
     $host = 'localhost';
     $usuario = 'root';
     $senha = '';
-    $dbname = 'aulaphpcrud';
+    $dbname = 'phpcrud';
 
     try{
         // Criando uma nova conexão ao criar um objeto mysqli
