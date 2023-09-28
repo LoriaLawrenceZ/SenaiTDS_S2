@@ -1,20 +1,16 @@
 import java.awt.CardLayout;
 
 import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
 
-public class Exercicio1 extends JFrame{
+public class Exercicio1 extends JPanel{
     public Exercicio1() {
-        super("Exercício 1");
-
-         // criar um painel principal
-        JPanel painelPrincipal = new JPanel();
+        super();
 
         // set layout - card layout
         CardLayout cardLayout = new CardLayout();
-        painelPrincipal.setLayout(cardLayout);
+        this.setLayout(cardLayout);
 
         // criando os botões
         JButton button1 = new JButton("Next");
@@ -35,25 +31,19 @@ public class Exercicio1 extends JFrame{
         card3.add(button3);
 
         // adicionar os cards criados ao painel principal
-        painelPrincipal.add(card1);
-        painelPrincipal.add(card2);
-        painelPrincipal.add(card3);
-
-        //set do frame
-        this.add(painelPrincipal);
-        this.setDefaultCloseOperation(2);
-        this.setBounds(100, 100, 300, 300);
-        this.setVisible(true);
+        this.add(card1);
+        this.add(card2);
+        this.add(card3);
 
         // adicionando ações para o botão
         button1.addActionListener(e->{
-            cardLayout.next(painelPrincipal);
+            cardLayout.next(this);
         });
         button2.addActionListener(e->{
-            cardLayout.next(painelPrincipal);
+            cardLayout.next(this);
         });
         button3.addActionListener(e->{
-            cardLayout.next(painelPrincipal);
+            cardLayout.next(this);
         });
     }
 }

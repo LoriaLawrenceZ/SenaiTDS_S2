@@ -4,7 +4,7 @@ public class FrameApp extends JFrame {
     public FrameApp() {
         super("S2-POO-SA3");
         
-        this.add(new TabbedPane());
+        this.add(new TabbedApp());
 
         //Setando janela
         this.setBounds(550, 150, 400, 500);
