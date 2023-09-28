@@ -1,5 +1,7 @@
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -21,6 +23,7 @@ public class Exercicio3 extends JPanel {
     ArrayList<JComponent> componentes = new ArrayList<JComponent>(){
         {
             add(new JTextArea("Empresa"));
+
             add(new JTextArea("Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login"));
         
             //Botões
@@ -56,6 +59,8 @@ public class Exercicio3 extends JPanel {
     private JPanel criarHome(){
         JPanel tela1 = new JPanel();
 
+        //Setando Layout
+        tela1.setLayout(new GridBagLayout());
         //Setando Background
         tela1.setBackground(Color.DARK_GRAY);
 
@@ -65,10 +70,10 @@ public class Exercicio3 extends JPanel {
         // Declarando valores de cada item
         //Valores dos Visuais
         int[][] posicaoComponentes = {
-            {0, 0, 1, 1, 1, 1, 0, 0, 5, 5}, // Texto 1
-            {0, 1, 1, 1, 1, 1, 0, 0, 5, 5}, // Texto 2
-            {0, 2, 1, 1, 1, 1, 0, 0, 5, 5}, // Botão LOGIN
-            {1, 2, 1, 1, 1, 1, 0, 0, 5, 5}, // Botão CADASTRO
+            {0, 0, 2, 1, 1, 1, 10, 10, 10, 10}, // Texto 1
+            {0, 1, 2, 1, 2, 5, 10, 10, 10, 10}, // Texto 2
+            {0, 2, 1, 1, 1, 1, 10, 10, 10, 10}, // Botão LOGIN
+            {1, 2, 1, 1, 1, 1, 10, 10, 10, 10}, // Botão CADASTRO
         };
 
         //Configurando cada item do Painel (Exercicio 3)
@@ -84,11 +89,17 @@ public class Exercicio3 extends JPanel {
 
             JComponent componente = componentes.get(i);
             //Configurando JTextArea
-            if(i == 1){
+            if(i <= 1){
                 JTextArea texto = (JTextArea) componentes.get(i);
                 texto.setLineWrap(true);
 
-                elemento.fill = GridBagConstraints.HORIZONTAL;
+                //Definindo a fonte
+                Font font = new Font("Arial", Font.BOLD, 24);
+                texto.setFont(font); //Setando a fonte no JTextArea
+                texto.setBackground(Color.DARK_GRAY);
+                texto.setForeground(Color.WHITE);// Setando cor do texto
+                texto.setEditable(false);
+                texto.setAlignmentX(Component.CENTER_ALIGNMENT);
             }
             else if(i == 2 || i == 3){
                 JButton botao = (JButton) componentes.get(i);
