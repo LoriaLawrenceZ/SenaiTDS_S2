@@ -6,6 +6,7 @@ import java.awt.Insets;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
@@ -17,15 +18,12 @@ public class Exercicio3 extends JPanel {
 
     // ArrayLista dos componentes a serem exibidos
     // ArrayList dos Textos
-    ArrayList<JTextArea> componentesVisuais = new ArrayList<JTextArea>(){
+    ArrayList<JComponent> componentes = new ArrayList<JComponent>(){
         {
             add(new JTextArea("Empresa"));
             add(new JTextArea("Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login"));
-        }
-    };
-    // ArrayList dos botões
-    ArrayList<JButton> componentesBotoes = new ArrayList<JButton>(){
-        {
+        
+            //Botões
             add(new JButton("LOGIN"));
             add(new JButton("CADASTRO"));
         }
@@ -50,6 +48,8 @@ public class Exercicio3 extends JPanel {
 
         //Adicionando telas ao painel das telas
         cardPanel.add(home, "HOME");
+        cardPanel.add(login, "LOGIN");
+        cardPanel.add(cadastro, "CADASTRO");
     }
 
     //Função pra criar Home
@@ -64,45 +64,39 @@ public class Exercicio3 extends JPanel {
 
         // Declarando valores de cada item
         //Valores dos Visuais
-        int[][] posicaoComponentesVisuais = {
-            {0, 0, 1, 2, 2, 1, 5, 5, 5, 5},
-            {0, 1, 1, 4, 2, 1, 5, 5, 5, 5},
-        };
-        //Valores dos botões
-        int[][] posicaoComponentesBotoes = {
-            {0, 2, 1, 1, 1, 1, 5, 5, 5, 5},
-            {1, 2, 1, 1, 1, 1, 5, 5, 5, 5}
+        int[][] posicaoComponentes = {
+            {0, 0, 1, 1, 1, 1, 0, 0, 5, 5}, // Texto 1
+            {0, 1, 1, 1, 1, 1, 0, 0, 5, 5}, // Texto 2
+            {0, 2, 1, 1, 1, 1, 0, 0, 5, 5}, // Botão LOGIN
+            {1, 2, 1, 1, 1, 1, 0, 0, 5, 5}, // Botão CADASTRO
         };
 
         //Configurando cada item do Painel (Exercicio 3)
         //Configurando os Componentes Visuais
-        for(int i = 0; i < componentesVisuais.size(); i++){
-            elemento.gridx = posicaoComponentesVisuais[i][0];
-            elemento.gridy = posicaoComponentesVisuais[i][1];
-            elemento.gridwidth = posicaoComponentesVisuais[i][2];
-            elemento.gridheight = posicaoComponentesVisuais[i][3];
-            elemento.weightx = posicaoComponentesVisuais[i][4];
-            elemento.weighty = posicaoComponentesVisuais[i][5];
-            elemento.insets = new Insets(posicaoComponentesVisuais[i][6], posicaoComponentesVisuais[i][7], posicaoComponentesVisuais[i][8], posicaoComponentesVisuais[i][9]);
+        for(int i = 0; i < componentes.size(); i++){
+            elemento.gridx = posicaoComponentes[i][0];
+            elemento.gridy = posicaoComponentes[i][1];
+            elemento.gridwidth = posicaoComponentes[i][2];
+            elemento.gridheight = posicaoComponentes[i][3];
+            elemento.weightx = posicaoComponentes[i][4];
+            elemento.weighty = posicaoComponentes[i][5];
+            elemento.insets = new Insets(posicaoComponentes[i][6], posicaoComponentes[i][7], posicaoComponentes[i][8], posicaoComponentes[i][9]);
 
+            JComponent componente = componentes.get(i);
+            //Configurando JTextArea
+            if(i == 1){
+                JTextArea texto = (JTextArea) componentes.get(i);
+                texto.setLineWrap(true);
+
+                elemento.fill = GridBagConstraints.HORIZONTAL;
+            }
+            else if(i == 2 || i == 3){
+                JButton botao = (JButton) componentes.get(i);
+                botao.setBackground(Color.GREEN);
+            }
+            
             //Adicionando ao painel depois de configurar
-            tela1.add(componentesVisuais.get(i), elemento);
-        }
-        //Configurando os Componentes Botoes
-        for(int i = 0; i < componentesBotoes.size(); i++){
-            elemento.gridx = posicaoComponentesBotoes[i][0];
-            elemento.gridy = posicaoComponentesBotoes[i][1];
-            elemento.gridwidth = posicaoComponentesBotoes[i][2];
-            elemento.gridheight = posicaoComponentesBotoes[i][3];
-            elemento.weightx = posicaoComponentesBotoes[i][4];
-            elemento.weighty = posicaoComponentesBotoes[i][5];
-            elemento.insets = new Insets(posicaoComponentesBotoes[i][6], posicaoComponentesBotoes[i][7], posicaoComponentesBotoes[i][8], posicaoComponentesBotoes[i][9]);
-
-            JButton botao = componentesBotoes.get(i);
-            botao.setBackground(Color.GREEN);
-
-            //Adicionando ao painel depois de configurar
-            tela1.add(componentesBotoes.get(i), elemento);
+            tela1.add(componente, elemento);
         }
 
         return tela1;
