@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class Exercicio3 extends JPanel {
@@ -24,7 +25,7 @@ public class Exercicio3 extends JPanel {
         {
             add(new JTextArea("Empresa"));
 
-            add(new JTextArea("Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login"));
+            add(new JTextArea("Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login. Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login. Motivos do por que essa empresa é legal e por que vc tem qe se cadastrar ou fazer login."));
         
             //Botões
             add(new JButton("LOGIN"));
@@ -78,6 +79,7 @@ public class Exercicio3 extends JPanel {
 
         //Configurando cada item do Painel (Exercicio 3)
         //Configurando os Componentes Visuais
+        //Configurando os Componentes Visuais
         for(int i = 0; i < componentes.size(); i++){
             elemento.gridx = posicaoComponentes[i][0];
             elemento.gridy = posicaoComponentes[i][1];
@@ -87,27 +89,54 @@ public class Exercicio3 extends JPanel {
             elemento.weighty = posicaoComponentes[i][5];
             elemento.insets = new Insets(posicaoComponentes[i][6], posicaoComponentes[i][7], posicaoComponentes[i][8], posicaoComponentes[i][9]);
 
-            JComponent componente = componentes.get(i);
             //Configurando JTextArea
-            if(i <= 1){
-                JTextArea texto = (JTextArea) componentes.get(i);
-                texto.setLineWrap(true);
+            switch (i) {
+                case 1:
+                    elemento.fill = GridBagConstraints.BOTH;
 
-                //Definindo a fonte
-                Font font = new Font("Arial", Font.BOLD, 24);
-                texto.setFont(font); //Setando a fonte no JTextArea
-                texto.setBackground(Color.DARK_GRAY);
-                texto.setForeground(Color.WHITE);// Setando cor do texto
-                texto.setEditable(false);
-                texto.setAlignmentX(Component.CENTER_ALIGNMENT);
+                    JTextArea texto = (JTextArea) componentes.get(i);
+                case 0:
+                    elemento.anchor = GridBagConstraints.CENTER; // Alinhar ao topo
+                    
+                    texto = (JTextArea) componentes.get(i);
+                    texto.setLineWrap(true);
+                    
+                    //Criando e adicionando o ScrollPane
+                    JScrollPane areaComponente2 = new JScrollPane(texto);
+                    areaComponente2.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+
+                    // Definindo a fonte
+                    Font font = new Font("Arial", Font.BOLD, 24);
+                    texto.setFont(font); // Setando a fonte no JTextArea
+                    texto.setBackground(Color.DARK_GRAY);
+                    texto.setForeground(Color.WHITE);// Setando cor do texto
+                    texto.setEditable(false);
+                    texto.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+                    if(i == 0){
+                        // Adicionando ao painel depois de configurar
+                        tela1.add(texto, elemento);
+                    }
+                    else{
+                        // Adicionando ao painel depois de configurar
+                        tela1.add(areaComponente2, elemento);
+                    }
+
+                    break;
+
+                case 2, 3:
+                    elemento.anchor = GridBagConstraints.PAGE_END; // Alinhar à parte inferior
+
+                    JButton botao = (JButton) componentes.get(i);
+                    botao.setBackground(Color.GREEN);
+
+                    // Adicionando ao painel depois de configurar
+                    tela1.add(botao, elemento);
+                    break;
+
+                default:
+                    break;
             }
-            else if(i == 2 || i == 3){
-                JButton botao = (JButton) componentes.get(i);
-                botao.setBackground(Color.GREEN);
-            }
-            
-            //Adicionando ao painel depois de configurar
-            tela1.add(componente, elemento);
         }
 
         return tela1;
