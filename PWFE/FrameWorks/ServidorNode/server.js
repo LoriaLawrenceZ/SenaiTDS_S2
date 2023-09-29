@@ -19,4 +19,14 @@ const server = http.createServer((req, res) => { // A função recebe uma callba
             }
         });
     }
+    else{ // Se a URL da requisição não corresponder a nenhuma das condições acima:
+        
+        res.writeHead(404, { 'Content-Type': 'text/plain' }); // Define o código de resposta HTTP como 404 (Não Encontrado) e o tipo de conteúdo como texto simples.
+        
+        res.end('Página não encontrada'); // Envia a mensagem "Página não encontrada" como resposta para o cliente.
+    }
+});
+
+server.listen(3000, () => { // Inicia o servidor e o faz ouvir na porta 3000.
+    console.log('Servidor está ouvindo na porta 3000'); // Exibe uma mensagem no console quando o servidor é iniciado com sucesso.
 });
