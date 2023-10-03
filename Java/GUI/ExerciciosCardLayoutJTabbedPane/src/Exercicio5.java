@@ -21,8 +21,8 @@ import javax.swing.JTextArea;
 public class Exercicio5 extends JPanel {
     // -----===Criação dos itens Necessários===-----//
     // Criando componentes
-    private CardLayout cardLayout = new CardLayout(); // Declarando CardLayout
-    private JPanel cardPanel = new JPanel(); // Declarando JPanel que vai guardar os outros paineis
+    protected CardLayout cardLayout = new CardLayout(); // Declarando CardLayout
+    protected JPanel cardPanel = new JPanel(); // Declarando JPanel que vai guardar os outros paineis
 
     // ArrayList dos componentes a serem exibidos
     ArrayList<JComponent> componentes = new ArrayList<JComponent>() {
@@ -56,7 +56,7 @@ public class Exercicio5 extends JPanel {
     }
 
     // -----===Método de criação da PÁGINA HOME===-----
-    private JPanel criarHome() {
+    protected JPanel criarHome() {
         JPanel telaHome = new JPanel();
 
         // Setando Layout
@@ -123,24 +123,20 @@ public class Exercicio5 extends JPanel {
     public class HomeHandler implements MouseListener {
         @Override
         public void mouseClicked(MouseEvent e) {
-            cardLayout.show(cardPanel, "QUESTÃO 1");
+            cardLayout.next(cardPanel);
         }
 
         @Override
-        public void mousePressed(MouseEvent e) {
-        }
+        public void mousePressed(MouseEvent e) {}
 
         @Override
-        public void mouseReleased(MouseEvent e) {
-        }
+        public void mouseReleased(MouseEvent e) {}
 
         @Override
-        public void mouseEntered(MouseEvent e) {
-        }
+        public void mouseEntered(MouseEvent e) {}
 
         @Override
-        public void mouseExited(MouseEvent e) {
-        }
+        public void mouseExited(MouseEvent e) {}
     }
 
     // -----===Método de criação da Página Questão 1===-----
