@@ -1,4 +1,3 @@
-import java.awt.BorderLayout;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -6,16 +5,12 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
-import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class Exercicio5 extends JPanel {
@@ -126,15 +121,16 @@ public class Exercicio5 extends JPanel {
             cardLayout.next(cardPanel);
         }
 
+        // Não vai usar
         @Override
         public void mousePressed(MouseEvent e) {}
-
+        // Não vai usar
         @Override
         public void mouseReleased(MouseEvent e) {}
-
+        // Não vai usar
         @Override
         public void mouseEntered(MouseEvent e) {}
-
+        // Não vai usar
         @Override
         public void mouseExited(MouseEvent e) {}
     }
