@@ -109,7 +109,6 @@ public class ExemploNomeSobrenome extends JFrame {
             // Limpando os campos
             nomeTextField.setText("");
             sobrenomeTextField.setText("");
-
         }
     }
 }
