@@ -6,7 +6,6 @@ import javax.swing.JPanel;
 
 public class Exercicio1 extends JPanel {
     // Criando Componentes
-    private JOptionPane popUp; //Pop-Up
     private JButton botao = new JButton("Pop-Up"); //Botão para abrir Pop-Up
 
     // Contrutor
@@ -17,7 +16,7 @@ public class Exercicio1 extends JPanel {
 
         //Abrir pop-up ao clicar no botão
         botao.addActionListener(e -> { //Listener do botão
-            popUp = new JOptionPane("Olá");
+            JOptionPane.showMessageDialog(null, "Pop-Up");
         });
     }
 }

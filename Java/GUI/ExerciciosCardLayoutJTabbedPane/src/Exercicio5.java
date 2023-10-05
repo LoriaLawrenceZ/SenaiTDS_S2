@@ -76,8 +76,7 @@ public class Exercicio5 extends JPanel {
             elemento.gridheight = posicaoComponentes[i][3];
             elemento.weightx = posicaoComponentes[i][4];
             elemento.weighty = posicaoComponentes[i][5];
-            elemento.insets = new Insets(posicaoComponentes[i][6], posicaoComponentes[i][7], posicaoComponentes[i][8],
-                    posicaoComponentes[i][9]);
+            elemento.insets = new Insets(posicaoComponentes[i][6], posicaoComponentes[i][7], posicaoComponentes[i][8], posicaoComponentes[i][9]);
 
             // Arruamndo configuração de exibição
             if (i == 0) {
