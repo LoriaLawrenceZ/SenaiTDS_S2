@@ -1,0 +1,218 @@
+/*-----===FOOTER===-----*/
+footer{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(white 12.5%, blueviolet 12.5%);
+    background-color: blueviolet;
+}
+
+/*---=Footer Top=---*/
+.footer-top{
+    height: calc(100% - 30px);
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+}
+
+/*-Footer IDA-*/
+.footer-top-institucional, .footer-top-duvidas, .footer-top-ajuda{
+    height: auto;
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-radius: .5em;
+    background-color: slateblue;
+}
+
+.institucional-titulo, .duvidas-titulo, .ajuda-titulo{
+    height: 40px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--aqua-claro);
+    font-size: 14px;
+}
+
+.institucional-divisa, .duvidas-divisa, .ajuda-divisa{
+    height: 3px;
+    width: 90%;
+    background-image: linear-gradient(90deg, var(--azul-claro) 25%, bluesl 25%);
+}
+
+.institucional-content, .duvidas-content, .ajuda-content{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.institucional-content{height: 90px;}
+.duvidas-content{height: 150px;}
+.ajuda-content{height: 120px;}
+
+.institucional-item, .duvidas-item, .ajuda-item{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.institucional-item a, .duvidas-item a, .ajuda-item a{
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform: all .25s ease-in-out;
+}
+.institucional-item a:hover, .duvidas-item a:hover, .ajuda-item a:hover{
+    color: var(--aqua-medio);
+}
+
+/*-Footer Duplo-*/
+.footer-top-duplo{
+    height: 90%;
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5em;
+    background-color: bluesl;
+}
+
+.footer-duplo-pagamento{height: 43%;}
+.footer-duplo-newsletter{height: 53%;}
+.footer-duplo-pagamento, .footer-duplo-newsletter{width: 95%;}
+
+.pagamento-titulo, .newsletter-titulo {
+    height: 35px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--aqua-claro);
+    font-size: 14px;
+}
+.pagamento-divisa, .newsletter-divisa{
+    height: 3px;
+    width: 90%;
+    background-image: linear-gradient(90deg, var(--azul-claro) 25%, bluesl 25%);
+}
+
+/*-Pagamento-*/
+.cartao-container {
+    height: calc(100% - 35px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: .5em;
+    background-color: bluesl;
+}
+.cartao-card-container {
+    height: 40%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card-container a{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cartao-card{
+    height: 100%;
+}
+
+/*-Newsletter-*/
+.cadastro-email{
+    height: 50%;
+    width: 100%;
+}
+.email {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+.email-titulo{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.email-titulo h2{
+    font-size: 13px;
+    color: white;
+}
+.form-cadastro-email{
+    height: 55%;
+    width: 100%;
+}
+.fieldset-email{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.input-cadastro-email{
+    height: 100%;
+    width: 85%;
+    padding: 0 15px;
+    font-family: 'Krona One', sans-serif;
+    font-size: 13px;
+    color: darkgray;
+    outline: none;
+    border: none;
+}
+.input-cadastro-email-btn{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-claro);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.input-cadastro-email-btn img{
+    height: 80%;
+    width: 60%;
+}
+
+
+/*---=Footer Bottom=---*/
+.footer-bottom{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--aqua-claro);
+    font-size: 8px;
+    background-color: var(--aqua-escuro);
+}

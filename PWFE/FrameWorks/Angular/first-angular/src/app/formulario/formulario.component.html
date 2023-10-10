@@ -1,0 +1,16 @@
+<!-- formulario.component.html -->
+<form (ngSubmit)="onSubmit()" #usuarioForm="ngForm">
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="usuario.nome" required>
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail:</label>
+
+        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="usuario.email" required>
+    </div>
+    <!-- Adicione outros campos, se necessário -->
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
