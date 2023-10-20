@@ -8,13 +8,11 @@ $sql_code = "SELECT * FROM cadastros;";
 $sql_query = $mysqli->query($sql_code) or die("Falha na execução do códigomSQL: ".$mysqli->error);
 
 // Fazendo if para evitar erros (como array não inicializado)
-if($sql_query->num_rows == 0){
+if ($sql_query->num_rows == 0) {
     $pedidos = null
 }
-else{
+else {
     while($pedido = $sql_query->fetch_assoc()){
         $pedidos[] = $pedido;
     }
 }
-
-?>
