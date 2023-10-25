@@ -4,7 +4,7 @@ package Model;
 public class Usuario {
     // Localhost
     // Database empresa
-    // Clientes: id, nome, cpf, telefone, email, endereço
+    // Clientes: id, nome, cpf, telefone, email, endereço, senha
 
     //-----===| ATRIBUTOS |===-----//
     private int id;
@@ -13,6 +13,7 @@ public class Usuario {
     private String telefone;
     private String email;
     private String endereco;
+    private String senha;
     
 
     //-----===| GETTERS & SETTERS |===-----//
@@ -56,5 +57,12 @@ public class Usuario {
     }
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

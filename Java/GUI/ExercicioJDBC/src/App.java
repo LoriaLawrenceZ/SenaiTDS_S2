@@ -1,7 +1,7 @@
-import View.Home;
+import View.FrameApp;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        new Home();
+        new FrameApp();
     }
 }

@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class Conexao {
     // Localhost
     // Database empresa
-    // Clientes: id, nome, cpf, telefone, email, endereço
+    // Clientes: id, nome, cpf, telefone, email, endereço, senha
 
     //-----===| ATRIBUTOS |===-----//
     private static final String url = "jdbc:mysql://localhost:3306/empresa"; // URL do banco de dados
