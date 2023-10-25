@@ -28,4 +28,20 @@ public class Usuario implements Serializable {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public String getCpf() {
+        return null;
+    }
+
+    public String getTelefone() {
+        return null;
+    }
+
+    public String getEmail() {
+        return null;
+    }
+
+    public String getEndereco() {
+        return null;
+    }
 }
