@@ -7,14 +7,14 @@ import javax.swing.table.DefaultTableModel;
 
 import Model.Usuario;
 
-public class Operacoes {
+public class OperacoesUsuario {
     //-----===| ATRIBUTOS |===-----//
     private List<Usuario> usuarios;
     private DefaultTableModel tableModel;
     private JTable table;
 
     //-----===| CONSTRUTOR |===-----//
-    public Operacoes(List<Usuario> usuarios, DefaultTableModel tableModel, JTable
+    public OperacoesUsuario(List<Usuario> usuarios, DefaultTableModel tableModel, JTable
     table) {
         this.usuarios = usuarios;
         this.tableModel = tableModel;
@@ -65,6 +65,7 @@ public class Operacoes {
         Serializacao.serializar("dados.txt", usuarios);
     }
 
+    //---=| Atualizar Tabela |=---//
     private void atualizarTabela() {
         tableModel.setRowCount(0); // Voltar para a linha 0 pra adicionar corretamente (adicionar Lista dentro da Tabela)
 

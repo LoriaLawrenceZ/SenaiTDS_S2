@@ -1,13 +1,13 @@
 package View;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -17,13 +17,11 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-import java.awt.event.MouseEvent;
-
 import Control.OperacoesUsuario;
 import Control.Serializacao;
 import Model.Usuario;
 
-public class CadastroUsuarios extends JPanel {
+public class Agendamentos extends JPanel {
     //-----===| ATRIBUTOS |===-----//
     //-| Comum |-//
     private int linhaSelecionada = -1; // Int pra pegar linha selecionada//
@@ -34,16 +32,15 @@ public class CadastroUsuarios extends JPanel {
     JButton cadastrarButton;
     JButton atualizarButton;
     JButton apagarButton;
-    JButton apagarTodosButton;
     JButton salvarButton;
     //-| Lista |-//
     private List<Usuario> usuarios = new ArrayList<>(); // Lista de //
     //-| Tabela |-//
     private DefaultTableModel tableModel; // Contrução Lógica da tabela //
     private JTable table; // Construção visual da tabela //
-
-    //-----===| CONTRUTOR |===-----//
-    public CadastroUsuarios() {
+    
+    //-----===| CONSTRUTOR |===-----//
+    public Agendamentos() {
         //---=| Tabela |=---//
         tableModel = new DefaultTableModel(); // Instanciando objeto DefaultTableModel
         tableModel.addColumn("Nome"); // Adicionando coluna 'Nome'
@@ -57,7 +54,6 @@ public class CadastroUsuarios extends JPanel {
         cadastrarButton = new JButton("Cadastrar"); // Botão 'Cadastrar'
         atualizarButton = new JButton("Atualizar"); // Botão 'Atualizar'
         apagarButton = new JButton("Apagar"); // Botão 'Apagar'
-        apagarTodosButton = new JButton("Apagar Todos"); // Botão 'Apagar Todos'
         salvarButton = new JButton("Salvar"); // Botão 'Salvar'
 
         //---=| Adicionar Componentes ao Painel Principal |=---//
@@ -69,7 +65,6 @@ public class CadastroUsuarios extends JPanel {
         inputPanel.add(cadastrarButton);
         inputPanel.add(atualizarButton);
         inputPanel.add(apagarButton);
-        inputPanel.add(apagarTodosButton);
         inputPanel.add(salvarButton);
 
         //---=| Criação do Arquivo Binário |=---//
@@ -117,12 +112,6 @@ public class CadastroUsuarios extends JPanel {
                 operacoes.apagarUsuario(linhaSelecionada);
             }
         });
-        apagarTodosButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                operacoes.apagarTodosUsuarios();
-            }
-        });
         salvarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -133,7 +122,7 @@ public class CadastroUsuarios extends JPanel {
         //---=| Setando Layout |=---//
         this.setLayout(new BorderLayout());
         add(inputPanel, BorderLayout.NORTH);
-        add(scrollPane, BorderLayout.CENTER);        
+        add(scrollPane, BorderLayout.CENTER);
     }
 
     //-----===| MÉTODOS |===-----//
