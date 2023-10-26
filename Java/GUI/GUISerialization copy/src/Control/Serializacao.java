@@ -11,7 +11,7 @@ import Model.Usuario;
 
 public class Serializacao {
     //-----===| MÉTODOS |===-----//
-    //---=| Serializar |=---//
+    //---=| Serializar |=---// 
     // Serializar uma lista de USUÁRIOS em um arquivo binário
     public static void serializarUsuarios(String arquivoUsuarios, List<Usuario> usuarios) {
         try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream(arquivoUsuarios)) /*Tem que acontecer para 'Try' ser executado*/) { // Gravando informações

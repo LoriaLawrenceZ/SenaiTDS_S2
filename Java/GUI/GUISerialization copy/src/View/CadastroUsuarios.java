@@ -27,17 +27,21 @@ public class CadastroUsuarios extends JPanel {
     //-----===| ATRIBUTOS |===-----//
     //-| Comum |-//
     private int linhaSelecionada = -1; // Int pra pegar linha selecionada//
+    
     //-| Campos |-//
     private JTextField inputNome; // Campo para inserir 'nome' //
     private JTextField inputIdade; // Campo para inserir 'idade' //
+
     //-| Botões |-//
     JButton cadastrarButton;
     JButton atualizarButton;
     JButton apagarButton;
     JButton apagarTodosButton;
     JButton salvarButton;
+
     //-| Lista |-//
     private List<Usuario> usuarios = new ArrayList<>(); // Lista de //
+
     //-| Tabela |-//
     private DefaultTableModel tableModel; // Contrução Lógica da tabela //
     private JTable table; // Construção visual da tabela //

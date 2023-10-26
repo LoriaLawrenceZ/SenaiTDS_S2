@@ -22,7 +22,6 @@ import javax.swing.table.DefaultTableModel;
 import Control.OperacoesAgendamento;
 import Control.Serializacao;
 import Model.Agenda;
-import Model.Usuario;
 
 public class Agendamentos extends JPanel {
     //-----===| ATRIBUTOS |===-----//
