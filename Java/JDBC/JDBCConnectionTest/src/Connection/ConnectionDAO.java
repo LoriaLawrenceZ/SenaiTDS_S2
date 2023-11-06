@@ -64,7 +64,7 @@ public class ConnectionDAO {
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao deletar a tabela: " + e.getMessage(), e);
         } finally { // Independente se deu certo ou não, tem que fechar a conexão
-            preparedStatement.close();
+            ConnectionFactory.closePreparedStatement(preparedStatement);
             ConnectionFactory.closeConnection(this.connection); // Fecha conexão
         }
     }
@@ -72,16 +72,17 @@ public class ConnectionDAO {
     // Método para buscar por id
     public void buscarPorId(int id) {
         String sql = "SELECT * FROM MINHA_TABELA WHERE ID = ?";
+        
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setInt(1, id);
             
             ResultSet resultSet = stmt.executeQuery();
-
+              
             while (resultSet.next()) {
                 int idBuscado = resultSet.getInt("ID");
                 String nomeBuscado = resultSet.getString("NOME");
                 String emailBuscado = resultSet.getString("EMAIL");
-                System.out.println("o Resultado da busca é id " + idBuscado + " nome " + nomeBuscado + " email " + emailBuscado);
+                System.out.println("o Resultado da busca é\n[id] = " + idBuscado + "\n[nome] = " + nomeBuscado + "\n[email] = " + emailBuscado);
             }
             
             ConnectionFactory.closeResultSet(resultSet);
