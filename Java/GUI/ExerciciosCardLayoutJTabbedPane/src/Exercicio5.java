@@ -80,8 +80,7 @@ public class Exercicio5 extends JPanel {
 
             // Arruamndo configuração de exibição
             if (i == 0) {
-                JTextArea texto = (JTextArea) componentes.get(0); // Transformando em JTextArea (pra não mexer como se
-                                                                  // fosse JComponent)
+                JTextArea texto = (JTextArea) componentes.get(0); // Transformando em JTextArea (pra não mexer como se fosse JComponent)
 
                 // Definindo a fonte
                 Font font = new Font("Arial", Font.BOLD, 56);
@@ -91,8 +90,7 @@ public class Exercicio5 extends JPanel {
                 texto.setEditable(false);
                 texto.setAlignmentX(Component.CENTER_ALIGNMENT);
             } else {
-                JTextArea texto = (JTextArea) componentes.get(1); // Transformando em JTextArea (pra não mexer como se
-                                                                  // fosse JComponent)
+                JTextArea texto = (JTextArea) componentes.get(1); // Transformando em JTextArea (pra não mexer como se fosse JComponent)
 
                 // Definindo a fonte
                 Font font = new Font("Arial", Font.PLAIN, 12);
