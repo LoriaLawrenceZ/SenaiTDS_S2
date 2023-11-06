@@ -9,8 +9,8 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     //-----===| ATRIBUTOS |===-----//
     private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USUARIO = "postgres";
-    private static final String SENHA = "postgres";
+    private static final String USUARIO = "postgres"; // Administrador do banco
+    private static final String SENHA = "postgres"; // Senha do administrador do banco
 
     
     //-----===| MÉTODOS |===-----//

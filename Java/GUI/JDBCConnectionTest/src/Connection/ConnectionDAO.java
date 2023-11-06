@@ -18,9 +18,7 @@ public class ConnectionDAO {
     // -----===| MÉTODOS |===-----//
     // Método para CRIAR tabela
     public void criaTabela() {
-        String sqlQuery = "CREATE TABLE IF NOT EXISTS MINHA_TABELA (ID SERIAL, NOME VARCHAR(255), EMAIL VARCHAR(255), PRIMARY KEY(ID));"; // "SERIAL"
-                                                                                                                                          // ==
-                                                                                                                                          // auto_increment
+        String sqlQuery = "CREATE TABLE IF NOT EXISTS MINHA_TABELA (ID SERIAL, NOME VARCHAR(255), EMAIL VARCHAR(255), PRIMARY KEY(ID));"; // "SERIAL" == auto_increment
 
         // Quando passando algo como atributo no try-catch, aquilo tem que funcionar,
         // caso contrário vai pro catch
