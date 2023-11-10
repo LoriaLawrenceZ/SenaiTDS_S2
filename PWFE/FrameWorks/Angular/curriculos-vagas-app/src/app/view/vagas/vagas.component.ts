@@ -16,10 +16,10 @@ export class VagasComponent implements OnInit {
 
   // Injeta o serviço de vagas no construtor do componente
   ngOnInit(): void {
-    this.listarVagas();
     // Executa a função de listagem de vagas quando é inicializado
+    this.listarVagas();
   }
-  
+
   // Função para listar as vagas
   listarVagas() {
     this._vagasService.getVagas().subscribe((retornaVaga) => {

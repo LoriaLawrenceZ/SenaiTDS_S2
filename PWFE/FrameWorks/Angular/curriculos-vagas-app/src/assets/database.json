@@ -5,7 +5,7 @@
       "nome": "Desenvolver FrontEnd Jr",
       "foto": "foto1.jpg",
       "descricao": "Trabalhar com HTML, CSS e JS",
-      "salario": 4000
+      "salario": "4500"
     },
     {
       "id": 2,
@@ -19,7 +19,25 @@
       "nome": "Desenvolver Fullstack Senior",
       "foto": "foto3.jpg",
       "descricao": "Trabalhar com Desenvolvimento Web",
-      "salario": 10000
+      "salario": "10500"
+    },
+    {
+      "id": "4",
+      "nome": "Liceu Oliveira",
+      "foto": "foto4.jpg",
+      "descricao": "Deus",
+      "salario": "1000000000000000000000000"
+    }
+  ],
+  "curriculos": [
+    {
+      "id": "1",
+      "nome": "Fernando Rheder",
+      "foto": "fotoFer.jpg",
+      "descricao": "Desenvolvedor C",
+      "salario": "10",
+      "escolaridade": "Senai, Senac",
+      "experiencia": "2 anos de vendedor de caixa"
     }
   ]
 }

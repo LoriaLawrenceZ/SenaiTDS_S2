@@ -7,7 +7,7 @@
   /* Espaçamento interno para conteúdo do rodapé */
   text-align: center;
   /* Alinhar o texto ao centro */
-  position: absolute;
+  position: relative;
   bottom: 0;
   /* Fixa o rodapé no final da página */
   width: 100%;

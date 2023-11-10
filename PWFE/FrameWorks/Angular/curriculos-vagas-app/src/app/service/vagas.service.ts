@@ -11,7 +11,7 @@ import { Vaga } from '../models/vaga.model';
 export class VagaService {
   private apiUrl = 'http://localhost:3000/vagas'; // Caminho para o arquivo JSON
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {} // HttpClient -> Classe de conexão com o JSON
 
   // Obtém a lista de vagas a partir do arquivo JSON
   getVagas(): Observable<Vaga[]> {

@@ -1,1 +1,21 @@
-<p>curriculos works!</p>
+<section class="lista-curriculo">
+  <!-- Início de um loop ngFor que percorre cada objeto 'curriculo' na matriz
+'curriculos' -->
+  <div *ngFor="let curriculo of curriculos">
+    <div class="card" style="width: 18rem">
+      <img
+        src="assets\img\curriculos\{{ curriculo.foto }}"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">Código da curriculo: {{ curriculo.id }}</h5>
+        <h5 class="card-title">curriculo: {{ curriculo.nome }}</h5>
+        <p class="card-text">Descricão da curriculo: {{ curriculo.descricao }}</p>
+        <p class="card-text">Salário: R$ {{ curriculo.salario }},00</p>
+        <p class="card-text">Escolaridade: {{ curriculo.escolaridade }}</p>
+        <p class="card-text">Experiência: {{ curriculo.experiencia }}</p>
+      </div>
+    </div>
+  </div>
+</section>

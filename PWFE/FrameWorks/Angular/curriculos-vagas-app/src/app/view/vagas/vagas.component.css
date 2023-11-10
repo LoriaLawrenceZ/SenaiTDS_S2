@@ -1,0 +1,8 @@
+.lista-vagas{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.card{
+  margin: 0 15px;
+}
