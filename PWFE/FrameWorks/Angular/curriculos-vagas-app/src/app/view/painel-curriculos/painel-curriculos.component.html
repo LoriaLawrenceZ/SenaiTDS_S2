@@ -1,0 +1,62 @@
+<h2>Cadastrar</h2>
+<form>
+  <label>Id</label>
+  <input type="text" name="id" [(ngModel)]="curriculo.id" /><br />
+
+  <label>Nome</label>
+  <input type="text" name="nome" [(ngModel)]="curriculo.nome" /><br />
+
+  <label>Foto</label>
+  <input type="text" name="foto" [(ngModel)]="curriculo.foto" /><br />
+
+  <label>Descrição</label>
+  <input type="text" name="descricao" [(ngModel)]="curriculo.descricao" /><br />
+
+  <label>Salário</label>
+  <input type="text" name="salario" [(ngModel)]="curriculo.salario" /><br />
+
+  <label>Escolaridade</label>
+  <input type="text" name="salario" [(ngModel)]="curriculo.escolaridade" /><br />
+
+  <label>Experiência</label>
+  <input type="text" name="salario" [(ngModel)]="curriculo.experiencia" /><br />
+
+  <button type="button" (click)="cadastrar()">Cadastrar curriculo</button>
+  <button type="button" (click)="atualizar(curriculo.id)">Atualizar curriculo</button>
+  <button type="button" (click)="excluir(curriculo.id)">Excluir curriculo</button>
+</form>
+<section class="lista-curriculos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Código da curriculo</th>
+        <th>curriculo</th>
+        <th>Descrição da curriculo</th>
+        <th>Salário</th>
+        <th>Escolaridade</th>
+        <th>Experiência</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let curriculo of curriculos" class="curriculo-row">
+        <td>{{ curriculo.id }}</td>
+        <td>{{ curriculo.nome }}</td>
+        <td>{{ curriculo.descricao }}</td>
+        <td>R$ {{ curriculo.salario }},00</td>
+        <td>{{ curriculo.escolaridade }}</td>
+        <td>{{ curriculo.experiencia }}</td>
+        <td>
+          <button type="button" (click)="listarCurriculo(curriculo)" class="btn-listar">
+            Listar
+          </button>
+
+          <button type="button" (click)="excluir(curriculo.id)" class="btn-excluir">
+            Excluir
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+

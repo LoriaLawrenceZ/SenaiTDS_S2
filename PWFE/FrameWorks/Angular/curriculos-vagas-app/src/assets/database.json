@@ -20,24 +20,17 @@
       "foto": "foto3.jpg",
       "descricao": "Trabalhar com Desenvolvimento Web",
       "salario": "10500"
-    },
-    {
-      "id": "4",
-      "nome": "Liceu Oliveira",
-      "foto": "foto4.jpg",
-      "descricao": "Deus",
-      "salario": "1000000000000000000000000"
     }
   ],
   "curriculos": [
     {
-      "id": "1",
-      "nome": "Fernando Rheder",
-      "foto": "fotoFer.jpg",
-      "descricao": "Desenvolvedor C",
+      "id": 1,
+      "nome": "Fernando Rehder",
+      "foto": "foto4.jpg",
+      "descricao": "Engordei obtendo conhecimento",
       "salario": "10",
-      "escolaridade": "Senai, Senac",
-      "experiencia": "2 anos de vendedor de caixa"
+      "escolaridade": "Febem",
+      "experiencia": "Trabalho alisando pau"
     }
   ]
 }
